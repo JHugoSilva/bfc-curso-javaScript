@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Colaboradores</title>
+</head>
+<body>
+    <div id="topoJanela" class="topoJanela">
+        <div></div>
+        <div>Colaboradores</div>
+        <div>
+            <img src="../../imgs/add.svg" id="btn_add" class="btn_mainoper" title="Adicionar">
+        </div>
+    </div>
+    <div id="novoColaborador" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div>Novo Colaborador</div>
+                <img src="../../imgs/close.svg" class="btn_janelaopera" id="btn_fecharPopup">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Nome Colaborador</label>
+                    <input type="text" id="c_nome" name="c_nome">
+                </div>
+                <div class="campoForm">
+                    <label>Tipo Colaborador</label>
+                    <select name="f_tipo" id="f_tipo">
+                        <option value="">Teste</option>
+                    </select>
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select name="f_status" id="f_status">
+                        <option value="A">Ativo</option>
+                        <option value="I">Inativo</option>
+                    </select>
+                </div>
+                <div class="campoForm">
+                    <label>Foto</label>
+                    <input type="file" name="f_foto" id="f_foto" accept="image/png, image/jpeg, image/jpg">
+                </div>
+                <div class="campoForm2">
+                    <img src="#" id="img_foto" class="img_foto">
+                </div>
+                <div class="campoForm">
+                    <label>Telefone</label>
+                    <input type="text" id="f_nome" name="f_nome">
+                    <div id="telefones" class="telefones">
+                            <!-- <div class="tel">
+                                <div class="numTel">(84) 992548552</div>
+                                <img src="../../imgs/delete_.svg" class="delTel">
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_gravarPopup" class="btn_comandoPopup">Gravar</button>
+                <button id="btn_cancelarPopup" class="btn_comandoPopup">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="grid" class="grid">
+        <div id="tituloGrid" class="tituloGrid">
+            <div class="colunaTituloGrid c1">ID</div>
+            <div class="colunaTituloGrid c2">Nome</div>
+            <div class="colunaTituloGrid c3">Tipo</div>
+            <div class="colunaTituloGrid c4">Status</div>
+            <div class="colunaTituloGrid c5">Operação</div>
+        </div>
+        <div id="dadosGrid" class="dadosGrid">
+            <!-- <div class="linhaGrid">
+                <div class="colunaLinhaGrid c1">ID</div>
+                <div class="colunaLinhaGrid c2">Nome</div>
+                <div class="colunaLinhaGrid c3">Tipo</div>
+                <div class="colunaLinhaGrid c4">Status</div>
+                <div class="colunaLinhaGrid c5">Operação</div> 
+            </div> -->
+        </div>
+    </div>
+    <script src="../../index.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
