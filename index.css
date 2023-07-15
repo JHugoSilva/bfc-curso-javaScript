@@ -71,6 +71,15 @@ body {
     border: none;
 }
 
+.areaGrid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
 .grid {
     display: flex;
     justify-content: center;
@@ -105,6 +114,25 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.icone_op {
+    width: 25px;
+    cursor: pointer;
+}
+
+.linhaGrid:nth-child(even) {
+    background-color: #FFF;
+}
+
+.linhaGrid:nth-child(odd) {
+    background-color: #CCC;
+}
+
+.linhaGrid:hover {
+    background-color: #0AC !important;
+    color: #FFF !important;
+    cursor: pointer;
 }
 
 .colunaLinhaGrid {

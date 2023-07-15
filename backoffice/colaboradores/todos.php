@@ -3,11 +3,13 @@ ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 require_once '../../conexao.php';
-// $getTipo = filter_input_array(INPUT_GET,'tipo');
 $method = $_SERVER['REQUEST_METHOD'];
 switch ($method) {
     case 'GET':
         $sql = "SELECT * FROM usuarios";
+        if (!empty($_GET['id'])){
+           $sql .= " WHERE id ='{$_GET['id']}'";
+        }
         $sql = $conn->query($sql);
         $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
         $retorno = ['status' => true, 'dados' => $dados];
